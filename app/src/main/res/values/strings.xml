@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tinder_Clone</string>
+    <string name="facebook_app_id">519809799210984</string>
+    <string name="fb_login_protocol_scheme">fb519809799210984</string>
+</resources>
