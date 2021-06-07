@@ -110,11 +110,9 @@ class LoginActivity : AppCompatActivity() {
             }
 
             override fun onCancel() {
-                TODO("Not yet implemented")
             }
 
             override fun onError(error: FacebookException?) {
-                TODO("Not yet implemented")
             }
         })
 
@@ -144,7 +142,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         val userId = auth.currentUser?.uid.orEmpty()
-        val currentUserDB = Firebase.database.reference.child("Users")
+        val currentUserDB = Firebase.database.reference.child(DBKey.USERS).child(userId)
         val user = mutableMapOf<String,Any>()
         user["userId"] = userId
         currentUserDB.updateChildren(user)
